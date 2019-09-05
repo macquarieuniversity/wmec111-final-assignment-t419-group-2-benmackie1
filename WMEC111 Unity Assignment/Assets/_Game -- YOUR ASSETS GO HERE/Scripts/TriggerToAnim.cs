@@ -10,7 +10,7 @@ public class TriggerToAnim : MonoBehaviour {
 	public string occupiedBoolName = "Occupied";
 	private bool isOccupied = false;
 
-	public void Update() {
+	public void FixedUpdate() {
 		animator.SetBool(occupiedBoolName, isOccupied);
 		isOccupied = false;
 	}

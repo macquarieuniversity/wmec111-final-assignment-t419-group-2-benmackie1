@@ -13,13 +13,13 @@ public class ClickToAnim : MonoBehaviour {
 	public string mouseDragBoolName = "MouseDrag";
 	private bool isMouseOver = false;
 	private bool isMouseDrag = false;
-	private new Camera camera;
+	private Camera camera;
 
 	void Update () {
 
-		 RaycastHit hitInfo;
+		RaycastHit hitInfo;
 
-		 Ray ray = new Ray(Camera.main.transform.position, Camera.main.transform.forward);
+		Ray ray = new Ray(Camera.main.transform.position, Camera.main.transform.forward);
  		if (Physics.Raycast(ray, out hitInfo) && hitInfo.collider.gameObject == gameObject) {
  			if (!isMouseOver) {
 				animator.SetTrigger(lookAtTriggerName);
